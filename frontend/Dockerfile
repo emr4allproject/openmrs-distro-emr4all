@@ -22,8 +22,8 @@ RUN if [ ! -f ./spa/index.html ]; then echo 'Build failed. Please check the logs
 #--------------------------------------------
 
 COPY somalia_emr_config.json ./spa/somalia_emr_config.json
-COPY emr4all-logo.png ./spa/emr4all-logo.png
-COPY emr4all-logo-grayscale.png ./spa/emr4all-logo-grayscale.png
+COPY ./resources/logo.png /usr/share/nginx/html
+COPY ./resources/logo-black.png /usr/share/nginx/html
 
 #--------------------------------------------
 # Runtime Stage - Published Image
@@ -44,6 +44,6 @@ RUN chmod +x /usr/local/bin/startup.sh
 COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=dev /app/spa /usr/share/nginx/html
-COPY config-core_demo.json /usr/share/nginx/html
+COPY somaliaemr_config.json /usr/share/nginx/html
 
 CMD ["/usr/local/bin/startup.sh"]

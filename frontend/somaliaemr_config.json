@@ -6,6 +6,21 @@
       "action-menu-patient-chart-items-slot": {
         "order": ["order-basket-action-menu"]
       }
+    },
+    "logo": {
+      "src": "${openmrsSpaBase}/logo-black.png"
+    }
+  },
+  "@openmrs/esm-login-app": {
+    "logo": {
+      "src": "${openmrsSpaBase}/logo.png",
+      "alt": "Logo"
+    }
+  },
+  "@openmrs/esm-primary-navigation-app": {
+    "logo": {
+      "src": "${openmrsSpaBase}/logo-black.png",
+      "alt": "Logo"
     }
   },
   "@openmrs/esm-ward-app": {
@@ -47,6 +62,11 @@
     "defaultFacilityUrl": ""
   },
   "@openmrs/esm-styleguide": {
-    "Brand color #1": "#005d5d"
+    "Brand color #1": "#007BBA",
+    "Brand color #2": "#0A2F4A",
+    "Brand color #3": "#F9FAFB"
+  },
+  "@openmrs/esm-patient-attachments-app":{
+    "maxFileSize": 500
   }
 }
