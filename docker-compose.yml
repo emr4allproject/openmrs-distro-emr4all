@@ -1,8 +1,7 @@
-version: "3.7"
-
 services:
   gateway:
     image: openmrs/openmrs-reference-application-3-gateway:${TAG:-qa}
+    container_name: somalia-gateway
     restart: "unless-stopped"
     depends_on:
       - frontend
@@ -12,6 +11,7 @@ services:
 
   frontend:
     image: openmrs/openmrs-reference-application-3-frontend:${TAG:-qa}
+    container_name: somalia-frontend
     restart: "unless-stopped"
     environment:
       SPA_PATH: /openmrs/spa
@@ -26,6 +26,7 @@ services:
 
   backend:
     image: openmrs/openmrs-reference-application-3-backend:${TAG:-qa}
+    container_name: somalia-backend
     restart: "unless-stopped"
     depends_on:
       - db
@@ -46,6 +47,7 @@ services:
   # MariaDB
   db:
     image: mariadb:10.11.7
+    container_name: somalia-mariadb
     restart: "unless-stopped"
     command: "mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci"
     healthcheck:

@@ -1,0 +1,34 @@
+{
+  "@openmrs/esm-styleguide": {
+    "Brand color #1": "#007BBA",
+    "Brand color #2": "#0A2F4A",
+    "Brand color #3": "#F9FAFB"
+  },
+  "@openmrs/esm-patient-chart-app": {
+    "extensionSlots": {
+      "patient-chart-dashboard-slot": {
+        "remove": [
+          "immunization-summary-dashboard"
+        ]
+      }
+    },
+    "logo": {
+      "src": "emr4all-logo-grayscale.png"
+    }
+  },
+  "@openmrs/esm-login-app": {
+    "logo": {
+      "src": "emr4all-logo.png",
+      "alt": "emr-logo"
+    }
+  },
+  "@openmrs/esm-primary-navigation-app": {
+    "logo": {
+      "src": "emr4all-logo-grayscale.png",
+      "alt": "emr-logo"
+    }
+  },
+  "@openmrs/esm-patient-attachments-app":{
+    "maxFileSize": 500
+  }
+}

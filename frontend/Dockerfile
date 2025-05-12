@@ -2,7 +2,7 @@
 #--------------------------------------------
 # Dev Stage - Assembles and Builds Frontend
 #--------------------------------------------
-FROM --platform=$BUILDPLATFORM node:18-alpine as dev
+FROM --platform=$BUILDPLATFORM node:alpine as dev
 
 ARG APP_SHELL_VERSION=next
 
@@ -16,6 +16,14 @@ ARG CACHE_BUST
 RUN npx --legacy-peer-deps openmrs@${APP_SHELL_VERSION:-next} assemble --manifest --mode config --config spa-assemble-config.json --target ./spa
 RUN npx --legacy-peer-deps openmrs@${APP_SHELL_VERSION:-next} build --build-config spa-build-config.json --target ./spa
 RUN if [ ! -f ./spa/index.html ]; then echo 'Build failed. Please check the logs above for details. This may have happened because of an update to a library that OpenMRS depends on.'; exit 1; fi
+
+#--------------------------------------------
+# Branding customizations
+#--------------------------------------------
+
+COPY somalia_emr_config.json ./spa/somalia_emr_config.json
+COPY emr4all-logo.png ./spa/emr4all-logo.png
+COPY emr4all-logo-grayscale.png ./spa/emr4all-logo-grayscale.png
 
 #--------------------------------------------
 # Runtime Stage - Published Image
