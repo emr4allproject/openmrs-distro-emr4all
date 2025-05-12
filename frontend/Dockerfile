@@ -21,7 +21,6 @@ RUN if [ ! -f ./spa/index.html ]; then echo 'Build failed. Please check the logs
 # Branding customizations
 #--------------------------------------------
 
-COPY somalia_emr_config.json ./spa/somalia_emr_config.json
 COPY ./resources/logo.png /usr/share/nginx/html
 COPY ./resources/logo-black.png /usr/share/nginx/html
 
