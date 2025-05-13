@@ -20,9 +20,8 @@ RUN if [ ! -f ./spa/index.html ]; then echo 'Build failed. Please check the logs
 #--------------------------------------------
 # Branding customizations
 #--------------------------------------------
-
-COPY ./resources/logo.png /usr/share/nginx/html
-COPY ./resources/logo-black.png /usr/share/nginx/html
+COPY logo.png ./spa/logo.png
+COPY logo-black.png ./spa/logo-black.png
 
 #--------------------------------------------
 # Runtime Stage - Published Image
@@ -43,6 +42,6 @@ RUN chmod +x /usr/local/bin/startup.sh
 COPY nginx.conf /etc/nginx/nginx.conf
 
 COPY --from=dev /app/spa /usr/share/nginx/html
-COPY somaliaemr_config.json /usr/share/nginx/html
+COPY somalia_config.json /usr/share/nginx/html
 
 CMD ["/usr/local/bin/startup.sh"]

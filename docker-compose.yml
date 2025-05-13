@@ -1,6 +1,8 @@
 services:
   gateway:
-    image: openmrs/openmrs-reference-application-3-gateway:${TAG:-qa}
+    image: openmrs/somalia-gateway:latest
+    build:
+      context: ./gateway/
     container_name: somalia-gateway
     restart: "unless-stopped"
     depends_on:
@@ -10,7 +12,9 @@ services:
       - "80:80"
 
   frontend:
-    image: openmrs/openmrs-reference-application-3-frontend:${TAG:-qa}
+    image: openmrs/somalia-frontend:latest
+    build:
+      context: ./frontend/
     container_name: somalia-frontend
     restart: "unless-stopped"
     environment:
@@ -25,7 +29,9 @@ services:
       - backend
 
   backend:
-    image: openmrs/openmrs-reference-application-3-backend:${TAG:-qa}
+    image: openmrs/somalia-backend:latest
+    build:
+      context: .
     container_name: somalia-backend
     restart: "unless-stopped"
     depends_on:

@@ -4,29 +4,34 @@
     "showUpcomingAppointments": true,
     "extensionSlots": {
       "action-menu-patient-chart-items-slot": {
-        "order": ["order-basket-action-menu"]
+        "order": [
+          "order-basket-action-menu"
+        ]
       }
     },
     "logo": {
-      "src": "${openmrsSpaBase}/logo-black.png"
+      "src": "logo.png",
+      "alt": "Logo"
     }
   },
   "@openmrs/esm-login-app": {
     "logo": {
-      "src": "${openmrsSpaBase}/logo.png",
+      "src": "logo.png",
       "alt": "Logo"
     }
   },
   "@openmrs/esm-primary-navigation-app": {
     "logo": {
-      "src": "${openmrsSpaBase}/logo-black.png",
+      "src": "logo.png",
       "alt": "Logo"
     }
   },
   "@openmrs/esm-ward-app": {
     "extensionSlots": {
       "action-menu-ward-patient-items-slot": {
-        "add": ["order-basket-action-menu"]
+        "add": [
+          "order-basket-action-menu"
+        ]
       }
     }
   },
@@ -63,10 +68,10 @@
   },
   "@openmrs/esm-styleguide": {
     "Brand color #1": "#007BBA",
-    "Brand color #2": "#0A2F4A",
-    "Brand color #3": "#F9FAFB"
+    "Brand color #2": "#28A745",
+    "Brand color #3": "#0A2F4A"
   },
-  "@openmrs/esm-patient-attachments-app":{
+  "@openmrs/esm-patient-attachments-app": {
     "maxFileSize": 500
   }
 }
