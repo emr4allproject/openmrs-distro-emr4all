@@ -1,6 +1,6 @@
-# Somalia EMR OpenMRS 3.0 Application
+# Emr4all Distribution OpenMRS 3.0 Application
 
-This project holds the build configuration for the Somalia EMR OpenMRS 3.0 application.
+This project holds the build configuration for the emr4all EMR OpenMRS 3.0 application.
 
 ## Quick start
 
@@ -19,13 +19,13 @@ docker-compose build
 ### Run the app
 
 ```
-docker compose -p somalia-emr up -d
+docker compose -p emr4all-emr up -d
 ```
 
 OR 
 
 ```
-docker-compose -p somalia-emr up -d 
+docker-compose -p emr4all-emr up -d 
 ```
 
 The new OpenMRS UI is accessible at http://localhost/openmrs/spa
