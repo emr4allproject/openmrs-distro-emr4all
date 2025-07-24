@@ -20,7 +20,7 @@ RUN if [ ! -f ./spa/index.html ]; then echo 'Build failed. Please check the logs
 #--------------------------------------------
 # Branding customizations
 #--------------------------------------------
-COPY somalia_config.json ./spa/somalia_config.json   
+COPY emr4all_config.json ./spa/emr4all_config.json   
 COPY logo.png ./spa/logo.png
 COPY logo-black.png ./spa/logo-black.png
 

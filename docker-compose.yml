@@ -20,7 +20,7 @@ services:
     environment:
       SPA_PATH: /openmrs/spa
       API_URL: /openmrs
-      SPA_CONFIG_URLS: /openmrs/spa/somalia_config.json
+      SPA_CONFIG_URLS: /openmrs/spa/emr4all_config.json
       SPA_DEFAULT_LOCALE:
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost/"]
@@ -28,7 +28,7 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./frontend/somalia_config.json:/usr/share/nginx/html/somalia_config.json  
+      - ./frontend/emr4all_config.json:/usr/share/nginx/html/emr4all_config.json  
 
   backend:
     image: openmrs/somalia-backend:latest
